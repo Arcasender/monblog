@@ -1,43 +1,50 @@
-/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
-   (min-height) sur un bloc, il faut que son parent direct ait lui-même une
-   hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
-   pixels, em, autres unités...).
-   Si la hauteur du parent est en pourcentage, elle se réfère alors à la
-   hauteur du «grand-père», et ainsi de suite.
-   Pour pouvoir utiliser un "min-height: 100%" sur div#global, il nous faut:
-   - un parent (body) en "height: 100%";
-   - le parent de body également en "height: 100%". */
+/* Personnalisation du style du blog */
+
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    color: #bfbfbf;
-    background: black;
+    color: #e0e0e0;
+    background: #121212;
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
 
 h1 {
-    color: white;
+    color: #ffffff;
 }
 
 .titreBillet {
-    margin-bottom : 0px;
+    color: #4ea8de;
+    margin-bottom: 5px;
 }
 
 #global {
-    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
-    background: #333534;
-    width: 70%;
-    margin: auto;	/* Permet de centrer la div */
+    min-height: 100%;
+    background: #1e1e1e;
+    width: 75%;
+    max-width: 900px;
+    margin: auto;
     text-align: justify;
-    padding: 5px 20px;
+    padding: 10px 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 #contenu {
-    margin-bottom : 30px;
+    margin-bottom: 30px;
 }
 
 #titreBlog, #piedBlog {
     text-align: center;
+}
+
+#titreBlog a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#titreBlog a:hover {
+    color: #4ea8de;
 }
